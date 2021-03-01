@@ -1,0 +1,366 @@
+$silver:#ecf0f1;
+$grey:#f7f8f9;
+$black:#0b0c10;
+$large:1.3rem;
+$x-large:2rem;
+$purple-1:#8b13fd;
+$purple-2:#6e11f5;
+$gradient:linear-gradient(45deg,$purple-1,$purple-2);
+
+.title{
+    background:-webkit-linear-gradient($purple-1, $purple-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.flex-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.crd{
+    box-shadow: 0 0 25px gainsboro;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 1rem;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color:$black;
+    transition: 5s ease-out;
+    &:hover{
+       @extend .title
+    }
+}
+.container-fluid{
+    padding: 0 20px 0 20px;
+    .row{
+        padding: 0 20px 0 20px;
+    }
+}
+nav{
+    background-color: $grey;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding:0 20px 0 20px;
+    position: sticky;
+    top:0;
+    z-index: 30000;
+    .n-brand{
+        height: 100%;
+        font-size: $x-large;
+        @extend .title;
+        text-shadow: 0 0 2px $purple-1;
+    }
+    ul,ol{
+        display: flex;
+        column-gap:.5rem;
+        height: 100%;
+        align-items: center;
+        font-size: $large;
+     
+    }
+}
+.custom-shape-divider-bottom-1613595519 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 6;
+}
+
+.custom-shape-divider-bottom-1613595519 svg {
+    position: relative;
+    display: block;
+    width: calc(166% + 1.3px);
+    height: 170px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1613595519 .shape-fill {
+    fill: #FFFFFF;
+}
+.home{
+    .jumbotron-fluid{
+        height: 94vh;
+        position: relative;
+        overflow: hidden;
+        .overlay{
+            z-index:5;
+            background:$gradient;
+            height: 94vh;
+            width: 100%;
+            position: absolute;
+            top:0;
+            opacity: .2;
+        }
+        img{
+            z-index:1;
+            position: absolute;
+            top:-150px;
+            width: 100%;
+        }
+        
+    }
+
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-container{
+    height: 85vh;
+
+    .login-form{
+        height: 600px;
+        box-shadow: 0 0 25px gainsboro;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        .login-social{
+            width: 100%;
+            column-gap: 10px;
+            i{
+                height: 50px;
+                width: 50px;
+                display: flex;
+                border-radius: 50px;
+                align-items: center;
+                justify-content: center;
+                font-size: $large;
+                background-color: $purple-1;
+                color: white;
+            }
+        }
+        .form-group{
+            width: 68%;
+        }
+        div{
+            z-index:100;
+        }
+        h1{
+            color: $purple-1;
+            z-index: 7;
+        }
+        .input{
+            background-color: $silver;
+            height: 55px;
+            overflow: hidden;
+            border-radius: 40px;
+            display: grid;
+            grid-template-columns: 10% 90%;
+            align-items: center;
+            padding:0 1rem 0 1rem;
+            input{
+                background: none;
+                border:none;
+                outline: none;
+                font-size: $large;
+                font-weight: 600;
+                &:focus{
+                    outline: none;
+                    border: none;
+                    box-shadow: none;
+                }
+                
+            }
+            i{
+                font-size: $large;
+
+            }
+        }
+        .custom-shape-divider-bottom-1613595519 {
+            position: absolute;
+            top: 0;
+            left: -25px;
+            width: 500px;
+            overflow: hidden;
+            line-height: 0;
+            z-index: 6;
+            height: 180px;
+        }
+        
+        .custom-shape-divider-bottom-1613595519 svg {
+            position: relative;
+            display: block;
+            width: calc(166% + 1.3px);
+            height: 170px;
+            transform: rotateY(180deg);
+            background:$gradient
+        }
+        
+        .custom-shape-divider-bottom-1613595519 .shape-fill {
+            fill: white;
+        }
+    }
+    button{
+        background-color: $purple-1;
+        border: none;
+        border-radius: 20px;
+        height: 45px;
+        width:100%;
+        color: white;
+        font-size: $large;
+        box-shadow: 0 0 25px $purple-1;
+    }
+}
+.about{
+    h2{
+        @extend .title;
+        border-bottom: 1px solid gainsboro;
+        padding-bottom: .5rem;
+    }
+    .info{
+        display: grid;
+        grid-template-columns: 18% 85%;
+        border-bottom: 1px solid gainsboro;
+        column-gap: .5rem;
+    }
+    ul{
+        padding-top: .5rem;
+        column-gap: .5rem;
+        display: flex;
+        i{
+            height:35px;
+            width: 35px;
+            border-radius: 35px;  
+            color: white;          
+            background: $gradient;
+            @extend .flex-row
+        }
+    }
+}
+.contact{
+    h3{
+        font-size: $x-large;
+        @extend .title;
+    }
+    form{
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 25px gainsboro;
+        margin:auto;
+        margin-bottom: 55px;
+        height: 600px;
+        width: 85vw;
+        .form-left{
+            width:60%;
+            background: $grey;
+            position: relative;
+            overflow: hidden;
+            .overlay{
+                position: absolute;
+                top:0;
+                left:0;
+                background: $gradient;
+                height: 100%;
+                width: 100%;
+                opacity: .1;
+            }
+            img{
+                height: 60%;
+            }
+            color:white;
+            @extend .flex-row;
+            i{
+                font-size: 15rem;
+            }
+        }
+        .form-right{
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            flex-grow: 5;
+            input[type="text"]{
+                border: none;
+                outline: none;
+                box-shadow: none;
+                height: 45px;
+                background-color: $grey;
+                padding: 1rem;
+                border-radius: 20px;
+                width: 80%;
+            }textarea{
+                border: none;
+                outline: none;
+                box-shadow: none;
+                height: 150px;
+                background-color: $grey;
+                padding: 1rem;
+                width: 80%;
+                border-radius: 20px;
+            }
+            button{
+                width: 80%;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                border-radius: 20px;
+                height: 45px;
+                color: white;
+                font-size: $large;
+                background: $gradient;
+                box-shadow:  0 0 25px $purple-1;
+            }
+        }
+    }
+    
+}
+footer{
+    z-index: 100;
+    background-color: $grey;
+ 
+    width: 100%;
+    .f-brand{
+        height: 100%;
+        font-size: $x-large;
+        @extend .title
+    }
+    .container-fluid{
+        display: flex;
+        flex-direction: column;
+        padding: 45px 20px 0 20px;
+    }
+    .stay-connected{
+        display: flex;
+        max-width: 100%;
+        column-gap: 15px;
+        li{
+            a{
+                i{
+                    width:45px;
+                    height: 45px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 45px;
+                    font-size: $large;
+                    display: flex;
+                    color: white;
+                    background:$gradient
+                    
+                }
+            }
+        }
+    }
+}
